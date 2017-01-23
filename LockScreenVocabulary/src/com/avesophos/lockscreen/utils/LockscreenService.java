@@ -1,4 +1,4 @@
-package com.mehuljoisar.lockscreen.utils;
+package com.avesophos.lockscreen.utils;
 
 import android.app.Notification;
 import android.app.Service;
@@ -10,7 +10,7 @@ import android.os.IBinder;
 import android.provider.SyncStateContract.Constants;
 import android.support.v4.app.NotificationCompat;
 
-import com.mehuljoisar.lockscreen.R;
+import com.avesophos.lockscreen.R;
 
 public class LockscreenService extends Service {
 

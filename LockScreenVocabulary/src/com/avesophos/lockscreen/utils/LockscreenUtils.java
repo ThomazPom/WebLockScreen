@@ -1,4 +1,4 @@
-package com.mehuljoisar.lockscreen.utils;
+package com.avesophos.lockscreen.utils;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -10,7 +10,7 @@ import android.view.MotionEvent;
 import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
 
-import com.mehuljoisar.lockscreen.R;
+import com.avesophos.lockscreen.R;
 
 public class LockscreenUtils {
 

@@ -1,10 +1,10 @@
-package com.mehuljoisar.lockscreen.utils;
+package com.avesophos.lockscreen.utils;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import com.mehuljoisar.lockscreen.LockScreenActivity;
+import com.avesophos.lockscreen.LockScreenActivity;
 
 public class LockscreenIntentReceiver extends BroadcastReceiver {
 

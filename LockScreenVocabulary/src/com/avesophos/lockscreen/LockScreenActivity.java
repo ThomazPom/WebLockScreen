@@ -1,4 +1,4 @@
-package com.mehuljoisar.lockscreen;
+package com.avesophos.lockscreen;
 
 import android.app.Activity;
 import android.app.KeyguardManager;
@@ -13,17 +13,24 @@ import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
 import android.widget.Button;
 
-import com.mehuljoisar.lockscreen.utils.LockscreenService;
-import com.mehuljoisar.lockscreen.utils.LockscreenUtils;
+import com.avesophos.lockscreen.utils.LockscreenService;
+import com.avesophos.lockscreen.utils.LockscreenUtils;
 
 public class LockScreenActivity extends Activity implements
 		LockscreenUtils.OnLockStatusChangedListener {
 
-	// User-interface
-	private Button btnUnlock;
+    // User-interface
+    private Button btnOpt1;
+    private Button btnOpt2;
+    private Button btnOpt3;
+    private Button btnOpt4;
+    private TextView tvWord;
+    private TextView tvTime;
 
-	// Member variables
+    // Member variables
+    private String answer;
 	private LockscreenUtils mLockscreenUtils;
+    Random rand = new Random(Calendar.getInstance().getTimeInMillis());
 
 	// Set appropriate flags to make the screen appear over the keyguard
 	@Override
@@ -79,16 +86,88 @@ public class LockScreenActivity extends Activity implements
 
 	private void init() {
 		mLockscreenUtils = new LockscreenUtils();
-		btnUnlock = (Button) findViewById(R.id.btnUnlock);
-		btnUnlock.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				// unlock home button and then screen on button press
-				unlockHomeButton();
-			}
-		});
+        btnOpt1 = (Button) findViewById(R.id.btnOpt1);
+        btnOpt2 = (Button) findViewById(R.id.btnOpt2);
+        btnOpt3 = (Button) findViewById(R.id.btnOpt3);
+        btnOpt4 = (Button) findViewById(R.id.btnOpt4);
+        tvWord = (TextView) findViewById(R.id.tvWord);
+        tvTime = (TextView) findViewById(R.id.tvTime);
+        answer = btnOpt1.getText().toString();
+        resetQuestion();
 	}
+            
+    private void resetQuestion() {
+        // Reset button colors
+        btnOpt1.setBackgroundColor(getColor(getContext(), R.color.gray));
+        btnOpt2.setBackgroundColor(getColor(getContext(), R.color.gray));
+        btnOpt3.setBackgroundColor(getColor(getContext(), R.color.gray));
+        btnOpt4.setBackgroundColor(getColor(getContext(), R.color.gray));
+        
+        // Set answers
+        StringBuilder buf=new StringBuilder();
+        InputStream json=getAssets().open("ru-en.tsv");
+        
+        String str;
+        int ans = rand.nextInt(4) + 1;
+        
+        int int1 = rand.nextInt(800) + 1;
+        for (int i = 0; (str=in.readLine()) != null && i < int1; i++) {}
+        String[] columns = new String[2];
+        columns = str.split("\t");
+        btnOpt1.setText(str[0]);
+        if (ans==1) answer = str[1];
+        
+        int1 = rand.nextInt(800) + 1;
+        for (int i = 0; (str=in.readLine()) != null && i < int1; i++) {}
+        String[] columns = new String[2];
+        columns = str.split("\t");
+        btnOpt2.setText(str[0]);
+        if (ans==2) answer = str[1];
+        
+        int1 = rand.nextInt(800) + 1;
+        for (int i = 0; (str=in.readLine()) != null && i < int1; i++) {}
+        String[] columns = new String[2];
+        columns = str.split("\t");
+        btnOpt3.setText(str[0]);
+        if (ans==3) answer = str[1];
+        
+        int1 = rand.nextInt(800) + 1;
+        for (int i = 0; (str=in.readLine()) != null && i < int1; i++) {}
+        String[] columns = new String[2];
+        columns = str.split("\t");
+        btnOpt4.setText(str[0]);
+        if (ans==4) answer = str[1];
+        
+        in.close();
+        
+        // Set listeners
+        static final m_answer = answer;
+        OnClickListener m_listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button)v;
+                
+                // Correct answer - unlock home button and then screen on button press
+                if (m_answer.equals(btn.getText().toString()){
+                    resetQuestion();
+                    unlockHomeButton();
+                }
+                    
+                // Incorrect answer - turn the button red and do nothing else
+                else {
+                    btn.setBackgroundColor(Color.RED);
+                }
+            }
+        };
+        
+        btnOpt1.setOnClickListener(m_listener);
+        btnOpt2.setOnClickListener(m_listener);
+        btnOpt3.setOnClickListener(m_listener);
+        btnOpt4.setOnClickListener(m_listener);
+                    
+        // Set question
+        tvWord.setText(answer);
+    }
 
 	// Handle events of calls and unlock screen if necessary
 	private class StateListener extends PhoneStateListener {
