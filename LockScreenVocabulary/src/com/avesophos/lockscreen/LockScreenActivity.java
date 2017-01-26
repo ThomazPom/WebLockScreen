@@ -21,10 +21,15 @@ import java.util.*;
 import android.view.View.*;
 import android.graphics.*;
 import java.text.*;
+import android.speech.tts.*;
+import android.os.*;
 
 public class LockScreenActivity extends Activity implements
-		LockscreenUtils.OnLockStatusChangedListener {
+		LockscreenUtils.OnLockStatusChangedListener, TextToSpeech.OnInitListener {
 
+	// TextToSpeech Engine
+	private TextToSpeech tts;
+		  
     // User-interface
     private Button btnOpt1;
     private Button btnOpt2;
@@ -34,7 +39,11 @@ public class LockScreenActivity extends Activity implements
     private TextView tvTime;
 
     // Member variables
-    private String answer;
+    private final Locale[] locales = {new Locale("ru", "RU")};
+  	private final String[] wordlists = {"ru-en.tsv"};
+	private final int[] wordcounts = {3000};
+	private int language = 0; // Now only RU
+	private String answer;
 	private LockscreenUtils mLockscreenUtils;
     Random rand = new Random(Calendar.getInstance().getTimeInMillis());
 
@@ -60,7 +69,8 @@ public class LockScreenActivity extends Activity implements
 		setContentView(R.layout.activity_lockscreen);
 
 		init();
-
+		tts = new TextToSpeech(this, this);
+		
 		// unlock screen in case of app get killed by system
 		if (getIntent() != null && getIntent().hasExtra("kill")
 				&& getIntent().getExtras().getInt("kill") == 1) {
@@ -89,6 +99,17 @@ public class LockScreenActivity extends Activity implements
 
 		}
 	}
+	@Override
+	public void onInit(int status) { 	
+  		if (status == TextToSpeech.SUCCESS) {
+			int result = tts.setLanguage(locales[language]);
+			if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+			  Log.e("TTS", locales[language].getDisplayLanguage() + " is not supported.");
+			} 
+  		} else {
+			Log.e("Lockscreen", "Could not initialize TextToSpeech");
+  		}
+  	}
 
 	private void init() {
 		mLockscreenUtils = new LockscreenUtils();
@@ -118,9 +139,9 @@ public class LockScreenActivity extends Activity implements
 
 	  	try {
 		
-		  	BufferedReader in = new BufferedReader(new InputStreamReader(getAssets().open("ru-en.tsv")));
+		  	BufferedReader in = new BufferedReader(new InputStreamReader(getAssets().open(wordlists[language])));
         
-        	int int1 = rand.nextInt(800) + 1;
+        	int int1 = rand.nextInt(wordcounts[language]/4) + 1;
         	for (int i = 0; (str=in.readLine()) != null && i < int1; i++) {}
         	String[] columns = new String[2];
         	columns = str.split("\t");
@@ -130,7 +151,7 @@ public class LockScreenActivity extends Activity implements
 				answer = columns[0];
 			}
         
-        	int1 = rand.nextInt(800) + 1;
+		  	int1 = rand.nextInt(wordcounts[language]/4) + 1;
         	for (int i = 0; (str=in.readLine()) != null && i < int1; i++) {}
         	columns = str.split("\t");
         	btnOpt2.setText(columns[0]);
@@ -139,7 +160,7 @@ public class LockScreenActivity extends Activity implements
 				answer = columns[0];
 		  	}
 		  
-        	int1 = rand.nextInt(800) + 1;
+		  	int1 = rand.nextInt(wordcounts[language]/4) + 1;
        		for (int i = 0; (str=in.readLine()) != null && i < int1; i++) {}
         	columns = str.split("\t");
         	btnOpt3.setText(columns[0]);
@@ -148,7 +169,7 @@ public class LockScreenActivity extends Activity implements
 				answer = columns[0];
 		 	}
 		  
-        	int1 = rand.nextInt(800) + 1;
+		  	int1 = rand.nextInt(wordcounts[language]/4) + 1;
         	for (int i = 0; (str=in.readLine()) != null && i < int1; i++) {}
         	columns = str.split("\t");
         	btnOpt4.setText(columns[0]);
@@ -169,8 +190,15 @@ public class LockScreenActivity extends Activity implements
                 Button btn = (Button)v;
                 
                 // Correct answer - unlock home button and then screen on button press
-                if (m_answer.equals(btn.getText().toString())){
-                    unlockHomeButton();
+			  	if (m_answer.equals(btn.getText().toString())){
+					btn.setBackgroundColor(Color.GREEN);
+				  	tts.speak(answer, TextToSpeech.QUEUE_FLUSH, null);
+					Handler delayHandler = new Handler();
+					delayHandler.postDelayed(new Runnable() {
+					  public void run() {
+						unlockHomeButton();
+					  }
+					}, 2000);
                 }
                     
                 // Incorrect answer - turn the button red and do nothing else
@@ -268,6 +296,15 @@ public class LockScreenActivity extends Activity implements
 	protected void onStop() {
 		super.onStop();
 		unlockHomeButton();
+	}
+
+	@Override
+	public void onDestroy() {
+	  if (tts != null) {
+		tts.stop();
+		tts.shutdown();
+	  }
+	  super.onDestroy();
 	}
 
 	@SuppressWarnings("deprecation")
