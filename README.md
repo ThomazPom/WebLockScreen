@@ -16,8 +16,12 @@ Initial
 
 Locked
 
-![Alt text](http://thumbnails114.imagebam.com/42319/422e11423182518.jpg "")
+![Alt text](https://github.com/webmagex/LockScreenVocabulary/blob/master/Screenshot_2017-01-26-12-50-42.jpg?raw=true "")
 
+
+Unlocking
+
+![Alt text](https://github.com/webmagex/LockScreenVocabulary/blob/master/Screenshot_2017-01-26-12-51-32.jpg?raw=true "")
 
 
 Unlocked
