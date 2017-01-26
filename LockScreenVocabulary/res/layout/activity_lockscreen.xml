@@ -29,47 +29,43 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="15dp"
-        android:layout_below="@id/tvInstructions"
         android:layout_centerHorizontal="true"
         android:text="@string/unlock"
         android:textAppearance="@android:style/TextAppearance.Large"
         android:textColor="@color/selector_txt_btn_unlock"
-        android:background="@android:color/gray" />
+        android:background="@color/gray" />
         
     <Button
         android:id="@+id/btnOpt2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="15dp"
-        android:layout_below="@id/btnOpt1"
         android:layout_centerHorizontal="true"
         android:text="-"
         android:textAppearance="@android:style/TextAppearance.Large"
         android:textColor="@color/selector_txt_btn_unlock"
-        android:background="@android:color/gray" />
+        android:background="@color/gray" />
         
     <Button
         android:id="@+id/btnOpt3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="15dp"
-        android:layout_below="@id/btnOpt2"
         android:layout_centerHorizontal="true"
         android:text="-"
         android:textAppearance="@android:style/TextAppearance.Large"
         android:textColor="@color/selector_txt_btn_unlock"
-        android:background="@android:color/gray" />
+        android:background="@color/gray" />
         
     <Button
         android:id="@+id/btnOpt4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="15dp"
-        android:layout_below="@id/btnOpt3"
         android:layout_centerHorizontal="true"
         android:text="-"
         android:textAppearance="@android:style/TextAppearance.Large"
         android:textColor="@color/selector_txt_btn_unlock"
-        android:background="@android:color/gray" />
+        android:background="@color/gray" />
         
 </RelativeLayout>

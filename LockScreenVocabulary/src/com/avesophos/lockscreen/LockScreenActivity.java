@@ -15,6 +15,11 @@ import android.widget.Button;
 
 import com.avesophos.lockscreen.utils.LockscreenService;
 import com.avesophos.lockscreen.utils.LockscreenUtils;
+import java.io.*;
+import android.widget.*;
+import java.util.*;
+import android.view.View.*;
+import android.graphics.*;
 
 public class LockScreenActivity extends Activity implements
 		LockscreenUtils.OnLockStatusChangedListener {
@@ -98,14 +103,15 @@ public class LockScreenActivity extends Activity implements
             
     private void resetQuestion() {
         // Reset button colors
-        btnOpt1.setBackgroundColor(getColor(getContext(), R.color.gray));
-        btnOpt2.setBackgroundColor(getColor(getContext(), R.color.gray));
-        btnOpt3.setBackgroundColor(getColor(getContext(), R.color.gray));
-        btnOpt4.setBackgroundColor(getColor(getContext(), R.color.gray));
+        btnOpt1.setBackgroundColor(getColor(Color.GRAY));
+	    btnOpt2.setBackgroundColor(getColor(Color.GRAY));
+        btnOpt3.setBackgroundColor(getColor(Color.GRAY));
+        btnOpt4.setBackgroundColor(getColor(Color.GRAY));
         
         // Set answers
         StringBuilder buf=new StringBuilder();
-        InputStream json=getAssets().open("ru-en.tsv");
+		try {
+        BufferedReader in = new BufferedReader(new InputStreamReader(getAssets().open("ru-en.tsv")));
         
         String str;
         int ans = rand.nextInt(4) + 1;
@@ -114,41 +120,40 @@ public class LockScreenActivity extends Activity implements
         for (int i = 0; (str=in.readLine()) != null && i < int1; i++) {}
         String[] columns = new String[2];
         columns = str.split("\t");
-        btnOpt1.setText(str[0]);
-        if (ans==1) answer = str[1];
+        btnOpt1.setText(columns[0]);
+        if (ans==1) answer = columns[1];
         
         int1 = rand.nextInt(800) + 1;
         for (int i = 0; (str=in.readLine()) != null && i < int1; i++) {}
-        String[] columns = new String[2];
         columns = str.split("\t");
-        btnOpt2.setText(str[0]);
-        if (ans==2) answer = str[1];
+        btnOpt2.setText(columns[0]);
+        if (ans==2) answer = columns[1];
         
         int1 = rand.nextInt(800) + 1;
         for (int i = 0; (str=in.readLine()) != null && i < int1; i++) {}
-        String[] columns = new String[2];
         columns = str.split("\t");
-        btnOpt3.setText(str[0]);
-        if (ans==3) answer = str[1];
+        btnOpt3.setText(columns[0]);
+        if (ans==3) answer = columns[1];
         
         int1 = rand.nextInt(800) + 1;
         for (int i = 0; (str=in.readLine()) != null && i < int1; i++) {}
-        String[] columns = new String[2];
         columns = str.split("\t");
-        btnOpt4.setText(str[0]);
-        if (ans==4) answer = str[1];
+        btnOpt4.setText(columns[0]);
+        if (ans==4) answer = columns[1];
         
         in.close();
+		} catch (IOException e) {
+		}
         
         // Set listeners
-        static final m_answer = answer;
+        final String m_answer = answer;
         OnClickListener m_listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Button btn = (Button)v;
                 
                 // Correct answer - unlock home button and then screen on button press
-                if (m_answer.equals(btn.getText().toString()){
+                if (m_answer.equals(btn.getText().toString())){
                     resetQuestion();
                     unlockHomeButton();
                 }
