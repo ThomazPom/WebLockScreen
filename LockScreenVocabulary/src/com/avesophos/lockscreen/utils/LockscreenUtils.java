@@ -14,6 +14,9 @@ import com.avesophos.lockscreen.R;
 
 public class LockscreenUtils {
 
+	// Flag to pass to indicate that we are coming from a lockscreen
+	public static final int LOCKSCREEN = 4321;
+	
 	// Member variables
 	private OverlayDialog mOverlayDialog;
 	private OnLockStatusChangedListener mLockStatusChangedListener;

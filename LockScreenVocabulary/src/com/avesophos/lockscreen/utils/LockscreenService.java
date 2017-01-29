@@ -11,6 +11,9 @@ import android.provider.SyncStateContract.Constants;
 import android.support.v4.app.NotificationCompat;
 
 import com.avesophos.lockscreen.R;
+import com.avesophos.lockscreen.*;
+import com.avesophos.lockscreen.Language;
+import android.app.*;
 
 public class LockscreenService extends Service {
 
@@ -39,12 +42,17 @@ public class LockscreenService extends Service {
 
 	// Run service in foreground so it is less likely to be killed by system
 	private void startForeground() {
+
+		Intent mIntent = new Intent(this, LockScreenActivity.class);
+		//mIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		PendingIntent pi = PendingIntent.getActivity(this, 0, mIntent, 0);
+		
 		Notification notification = new NotificationCompat.Builder(this)
 		 .setContentTitle(getResources().getString(R.string.app_name))
 		 .setTicker(getResources().getString(R.string.app_name))
-		 .setContentText("Running")
+		 .setContentText(getResources().getString(R.string.notification_clickme))
 		 .setSmallIcon(R.drawable.ic_launcher)
-		 .setContentIntent(null)
+		 .setContentIntent(pi)
 		 .setOngoing(true)
 		 .build();
 		 startForeground(9999,notification);		

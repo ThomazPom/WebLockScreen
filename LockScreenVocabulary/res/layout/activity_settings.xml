@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="fill_parent"
+	android:layout_width="fill_parent"
+	android:orientation="vertical">
+
+	<TableLayout
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent">
+
+		<TableRow
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent">
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:text="@string/settings_title"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_span="3"
+				android:layout_weight="0.9"
+				android:layout_width="fill_parent"/>
+
+		</TableRow>
+
+		<TableRow
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent">
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:text="@string/settings_language"
+				android:layout_width="wrap_content"
+				android:layout_weight="0.3"/>
+
+			<Spinner
+				android:layout_height="wrap_content"
+				android:layout_span="2"
+				android:layout_width="fill_parent"
+				android:id="@+id/settings_language"
+				android:layout_weight="0.7"/>
+
+		</TableRow>
+
+		<TableRow
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent">
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:text="@string/settings_difficulty"
+				android:layout_weight="0.3"
+				android:layout_width="wrap_content"
+				android:id="@+id/lbl_difficulty"/>
+
+			<SeekBar
+				android:layout_height="wrap_content"
+				android:layout_span="2"
+				android:layout_width="fill_parent"
+				android:id="@+id/settings_difficulty"
+				android:layout_weight="0.7"/>
+
+		</TableRow>
+
+		<TableRow
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent">
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:text="@string/settings_tts"
+				android:layout_width="wrap_content"
+				android:layout_weight="0.3"/>
+
+			<CheckBox
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:layout_column="2"
+				android:id="@+id/settings_tts"
+				android:gravity="right"
+				android:layout_weight="0.7"
+				android:layout_gravity="right"/>
+
+		</TableRow>
+
+		<TableRow
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent">
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:text="@string/settings_security"
+				android:layout_weight="0.3"
+				android:layout_width="wrap_content"
+				android:id="@+id/lbl_security"/>
+
+			<CheckBox
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:layout_column="2"
+				android:id="@+id/settings_security"
+				android:gravity="right"
+				android:layout_weight="0.7"
+				android:layout_gravity="right"/>
+
+		</TableRow>
+
+		<TableRow
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent">
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:text="@string/settings_password"
+				android:layout_weight="0.3"
+				android:layout_width="wrap_content"
+				android:id="@+id/lbl_password"/>
+
+			<EditText
+				android:layout_height="wrap_content"
+				android:inputType="number"
+				android:layout_weight="0.7"
+				android:ems="10"
+				android:layout_span="2"
+				android:layout_width="fill_parent"
+				android:id="@+id/settings_password"/>
+
+		</TableRow>
+
+		<TableRow
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent">
+
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_span="3"
+				android:layout_weight="1.0"
+				android:text="@string/btn_save"
+				android:layout_width="fill_parent"
+				android:onClick="save"/>
+
+		</TableRow>
+
+	</TableLayout>
+
+</LinearLayout>
+

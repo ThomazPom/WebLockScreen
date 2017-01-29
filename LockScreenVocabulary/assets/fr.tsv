@@ -1,22 +1,21 @@
 je	I	ich	je	yo
 de	of	von	de	de
-est	East	ist	est	es
-pas	not	nicht	pas	no
+est	is	ist	est	es
+ne ... pas	not	nicht	pas	no
 le	the	die	le	la
-vous	you	Sie	vous	usted
+vous	you (formal)	Sie	vous	usted
 la	the	die	la	la
-tu	you	Sie	tu	usted
+tu	you (informal)	du	tu	usted
 que	than	dass	que	que
 un	a	ein	un	una
 il	he	es	il	lo
 et	and	und	et	y
 à	at	zu	à	a
 a	at	hat	a	tiene
-ne	born	nicht	ne	no
 les	the	die	les	la
 ce	this	diese	ce	este
 en	in	in	en	en
-on	we	ein	on	uno
+on	one	man	on	uno
 ça	it	es	ça	lo
 une	a	ein	une	una
 ai	have	haben	ai	tener
@@ -63,7 +62,7 @@ là	the	da	là	hay
 rien	nothing	nichts	rien	nada
 dit	said	sagte	dit	dicho
 es	es	es	es	eS
-où	or	wo	où	donde
+où	where	wo	où	donde
 votre	your	Ihre	votre	su
 pourquoi	Why	warum	pourquoi	Por qué
 sont	are	sind	sont	están
@@ -83,7 +82,7 @@ ou	or	oder	ou	o
 très	very	sehr	très	muy
 merci	thank you	danke	merci	gracias
 ont	have	haben	ont	tener
-même	even	gleiche	même	incluso
+même	same as	gleiche	même	incluso
 jamais	never	je	jamais	jamas
 aussi	also	auch	aussi	también
 voir	see	Ansicht	voir	vista
@@ -101,10 +100,9 @@ fais	do	tun	fais	hacer
 avoir	to have	haben	avoir	tener
 peut	can	können	peut	puede
 autre	other	andere	autre	otro
-m	m	m	m	m
 encore	again	wieder	encore	todavia
 maintenant	now	jetzt	maintenant	Ahora
-peu	little	Bit	peu	poco
+peu	little	bisschen	peu	poco
 mes	my	meine	mes	mi
 vraiment	really	wirklich	vraiment	realmente
 temps	time	Zeit	temps	tiempo
@@ -134,7 +132,7 @@ leur	their	ihre	leur	su
 avant	before	vor	avant	antes
 étais	was	war	étais	era
 besoin	need	brauchen	besoin	necesitar
-femme	wife	Frau	femme	mujer
+femme	woman	Frau	femme	mujer
 aime	love	wie	aime	como
 personne	no one	Person	personne	persona
 avais	had	hatte	avais	tenido
@@ -143,7 +141,7 @@ vrai	true	real	vrai	verdadero
 ans	years	Jahre	ans	años
 mal	wrong	krank	mal	mal
 ses	his	seine	ses	su
-parler	speak	Vortrag	parler	hablar
+parler	speak	sprechen	parler	hablar
 vos	your	Ihre	vos	su
 après	after	nach	après	tras
 mort	death	Tod	mort	muerte
@@ -155,7 +153,7 @@ parce	by	da	parce	porque
 mieux	better	besser	mieux	mejor
 petit	small	klein	petit	pequeño
 voilà	here	hier	voilà	Vale
-tes	your	Ihre	tes	su
+tes	your	deiner	tes	su
 ca	it	ca	ca	California
 dis	tell	sagen	dis	decir
 beaucoup	a lot	viele	beaucoup	mucha
@@ -269,7 +267,7 @@ travail	job	arbeiten	travail	laboral
 pu	could	könnte	pu	podría
 seule	alone	nur	seule	solo
 sens	meaning	Bedeutung	sens	significado
-ni	or	oder	ni	o
+ni	nor	weder noch	ni	o
 allons	will	werden	allons	vamos
 revoir	meet again	revidieren	revoir	revisar
 idée	idea	Idee	idée	idea
@@ -281,7 +279,7 @@ entendu	heard	gehört	entendu	oído
 trouvé	find	gefunden	trouvé	fundar
 trouver	find	finden	trouver	encontrar
 vieux	old	alt	vieux	viejo
-vient	just	nur	vient	justo
+vient	goes	geht	vient	justo
 pendant	while	für	pendant	durante
 aurait	would have	würde	aurait	haría
 quelques	a few	wenige	quelques	algunos
@@ -299,7 +297,7 @@ histoire	history	Geschichte	histoire	historia
 amis	friends	Freunde	amis	amigos
 venez	come	nur	venez	justo
 frère	brother	Bruder	frère	hermano
-rester	stay	Aufenthalt	rester	quedarse
+rester	stay	bleiben	rester	quedarse
 fini	finished	fertig	fini	acabado
 ville	city	Stadt	ville	ciudad
 nouveau	new	neu	nouveau	nuevo
@@ -332,7 +330,7 @@ seulement	only	nur	seulement	solamente
 guerre	war	Krieg	guerre	guerra
 beau	beautiful	schön	beau	hermoso
 vers	towards	zu	vers	a
-mme	Mrs	ms	mme	ms
+Mme	Mrs	Frau	mme	ms
 prie	pray	beten	prie	rezar
 devant	in front of	Front	devant	delante
 trouve	find	Funde	trouve	hallazgos
@@ -412,14 +410,14 @@ désolée	sorry	Entschuldigung	désolée	triste
 grande	great	groß	grande	alto
 point	point	Punkt	point	punto
 cinq	five	fünf	cinq	cinco
-dehors	outside	out	dehors	fuera
+dehors	outside	draussen	dehors	fuera
 filles	girls	Mädchen	filles	niñas
 cause	cause	Ursache	cause	causa
 vivre	live	leben	vivre	vivir
 près	near	schließen	près	Cerca
 pensais	thought	Denken	pensais	pensamiento
 garçon	boy	Junge	garçon	Chico
-chef	chief	Führer	chef	líder
+chef	boss	Führer	chef	líder
 haut	top	Top	haut	top
 capitaine	captain	Kapitän	capitaine	capitán
 dirait	would say	Aussehen	dirait	miradas
@@ -457,7 +455,6 @@ demander	request	fragen	demander	pedir
 meilleur	better	am besten	meilleur	mejor
 font	make	machen	font	hacer
 derrière	behind	hinter	derrière	destrás de
-c	c	c	c	c
 dollars	dollars	Dollar	dollars	dólares
 presque	almost	fast	presque	casi
 dr	dr	dr	dr	dr
@@ -473,16 +470,14 @@ attendre	expect	erwarten	attendre	esperar
 numéro	number	Anzahl	numéro	número
 serai	will	werden	serai	voluntad
 dur	hard	hart	dur	duro
-á	at	á	á	á
 souviens	remember	merken	souviens	recordar
-o	o	o	o	o
 voyez	see	sehen	voyez	ver
 cours	course	Kurs	cours	curso
 bonsoir	Good evening	guten Abend	bonsoir	buenas noches
 route	road	Straße	route	carretera
 fera	will	werden	fera	voluntad
 prend	take	nimmt	prend	toma
-cul	ass	Esel	cul	culo
+cul	donkey	Esel	cul	culo
 abord	on board	zuerst	abord	primero
 important	important	wichtig	important	importante
 peine	sentence	Satz	peine	frase
@@ -495,7 +490,7 @@ ferme	closed	Firma	ferme	firme
 ben	ben	ben	ben	ben
 plaisir	pleasure	Vergnügen	plaisir	placer
 chien	dog	Hund	chien	perro
-jeu	thu	Spiel	jeu	juego
+jeu	game	Spiel	jeu	juego
 seigneur	Lord	lord	seigneur	señor
 messieurs	gentlemen	Herren	messieurs	caballeros
 calme	calm	Ruhe	calme	calma
@@ -511,7 +506,7 @@ entrer	enter	eingeben	entrer	entrar
 lit	bed	Bett	lit	cama
 parfait	perfect	perfekt	parfait	perfecto
 fous	crazy	verrückt	fous	loco
-mlle	Ms	verpassen	mlle	señorita
+mlle	Ms	Frau	mlle	señorita
 rentrer	return	Rückkehr	rentrer	volver
 ait	has	hat	ait	tiene
 musique	music	Musik	musique	música
@@ -526,14 +521,12 @@ parfois	sometimes	manchmal	parfois	a veces
 téléphone	phone	Telefon	téléphone	teléfono
 retour	return	Rückkehr	retour	retorno
 ira	will	werden	ira	voluntad
-e	e	e	e	e
 pauvre	poor	schlecht	pauvre	pobre
 verre	glass	Glas	verre	cristal
 général	general	General	général	general
 new	new	neu	new	nuevo
 six	six	sechs	six	seis
 pensé	thought	Denken	pensé	pensamiento
-l	l	l	l	l
 impossible	impossible	unmöglich	impossible	imposible
 fête	Party	Fest	fête	celebración
 adore	love	liebe	adore	amor
@@ -556,7 +549,6 @@ mauvais	bad	schlecht	mauvais	malo
 chéri	Darling	Liebling	chéri	Querido
 oublié	forget it	vergessen	oublié	olvidado
 bras	arms	Arm	bras	brazo
-i	i	ich	i	yo
 gentil	nice	schön	gentil	simpatico
 faute	fault	Fehler	faute	criticar
 équipe	team	Team	équipe	equipo
@@ -567,7 +559,6 @@ changer	change	Veränderung	changer	cambiar
 commence	begin	beginnt	commence	comienza
 lieu	place	Platz	lieu	lugar
 entendre	hear	hören	entendre	escuchar
-ies	ies	ies	ies	IES
 roi	King	König	roi	rey
 plan	plan	Plan	plan	plan
 partout	all over	überall	partout	en todas partes
@@ -696,7 +687,6 @@ continue	keep on going	weiter	continue	continúa
 sort	fate	Schicksal	sort	destino
 faim	hunger	Hunger	faim	hambre
 long	long	lang	long	largo
-j	j	j	j	j
 voyage	trip	Reise	voyage	viajes
 message	message	Nachricht	message	mensaje
 sorte	kind	Art	sorte	especie
@@ -879,18 +869,16 @@ moitié	half	Hälfte	moitié	mitad
 surprise	surprise	Überraschung	surprise	sorpresa
 avocat	lawyer	Rechtsanwalt	avocat	abogado
 montre	watch	beobachten	montre	Reloj
-b	b	b	b	b
-su	su	su	su	Do
 porter	carry	tragen	porter	llevar
 télé	TV	Fernseher	télé	TV
 vivant	living	Leben	vivant	vida
 jure	sworn	schwören	jure	jurar
 disent	say	sagen	disent	decir
-mr	mr	mr	mr	mr
+mr	mr	Herr	mr	mr
 serez	will	werden	serez	voluntad
 devriez	should	sollte	devriez	debería
 devenu	become	werden	devenu	convertirse en
-aimé	love	gemocht	aimé	gustado
+aimé	loved	gemocht	aimé	gustado
 diable	Devil	Teufel	diable	diablo
 ligne	line	Linie	ligne	línea
 mission	mission	Mission	mission	misión
@@ -909,7 +897,6 @@ contrôle	control	Kontrolle	contrôle	control
 prête	ready	bereit	prête	listo
 anglais	English	Englisch	anglais	Inglés
 sorti	got out	out	sorti	fuera
-k	k	k	k	k
 bons	good	gut	bons	bueno
 disparu	faded away	fehlt	disparu	que falta
 tenir	hold	halten	tenir	sujetar
@@ -928,7 +915,6 @@ dangereux	dangerous	gefährlich	dangereux	peligroso
 attaque	attack	Angriff	attaque	ataque
 impression	impression	Drucken	impression	impresión
 folle	crazy woman	madwoman	folle	loca
-michael	michael	michael	michael	michael
 mange	eat	essen	mange	comer
 bravo	Bravo	bravo	bravo	¡bravo
 arrière	back	hintere	arrière	trasero
@@ -942,7 +928,7 @@ rencontré	meet	met	rencontré	cumplido
 honte	shame	Scham	honte	vergüenza
 connard	shithead	Arschloch	connard	gilipollas
 trou	hole	Loch	trou	agujero
-retourner	return	Rückkehr	retourner	volver
+retourner	return	rückkehren	retourner	volver
 chanson	song	Song	chanson	canción
 change	exchange	Austausch	change	intercambio
 arrêté	stopped	verhaftet	arrêté	detenido
@@ -1085,8 +1071,7 @@ centre	center	Zentrum	centre	centro
 thé	tea	Tee	thé	té
 mêmes	same	gleiche	mêmes	mismo
 avions	had	hatte	avions	tenido
-mike	mike	Mikrofon	mike	micro
-nulle	nothing	nichtig	nulle	nulo
+nulle	nothing	nichts	nulle	nulo
 stupide	dumb	dumm	stupide	estúpido
 pouvons	can	können	pouvons	lata
 vin	wine	Wein	vin	vino
@@ -1289,7 +1274,6 @@ monstre	monster	Monster	monstre	monstruo
 km	km	km	km	km
 retrouve	finds	Funde	retrouve	hallazgos
 ha	Ha	ha	ha	ja
-f	f	f	f	F
 importance	importance	Bedeutung	importance	importancia
 joie	joy	Freude	joie	alegría
 dérange	disturbs	Mühe	dérange	molestar
@@ -1309,14 +1293,12 @@ américains	US	US	américains	EE.UU.
 iis	iis	iis	iis	IIS
 quitte	quits	quitt	quitte	en paz
 poisson	fish	Fisch	poisson	pescado
-henry	henry	henry	henry	Henry
 ayez	have	haben	ayez	tener
 terrain	ground	Boden	terrain	terreno
 enquête	investigation	Umfrage	enquête	encuesta
 horrible	horrible	schrecklich	horrible	horrible
 chat	cat	Katze	chat	gato
 certaines	some	einige	certaines	algunos
-r	r	r	r	r
 camion	truck	LKW	camion	camión
 copine	girlfriend	Freundin	copine	compañera
 joyeux	happy	fröhlich	joyeux	alegre
@@ -1342,7 +1324,6 @@ refuse	refuse	verweigert	refuse	se niega
 charge	charge	Last	charge	carga
 billy	billy	Kochgeschirr	billy	porra
 chevaux	horses	Pferde	chevaux	caballos
-v	v	v	v	v
 chiens	dogs	Hunde	chiens	perros
 empêcher	prevent	verhindern	empêcher	impedir
 dure	tough	zäh	dure	duro
