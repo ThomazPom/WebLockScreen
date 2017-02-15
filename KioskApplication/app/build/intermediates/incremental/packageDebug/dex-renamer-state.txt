@@ -1,0 +1,7 @@
+#Wed Feb 15 23:55:56 CET 2017
+base.0=C\:\\Users\\Thoma\\AndroidStudioProjects\\android-kiosk-example\\KioskExample\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_ad6d03908212e8706b82d255c14c729c120cb7e1
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\Thoma\\AndroidStudioProjects\\android-kiosk-example\\KioskExample\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_41c3fd0820d25bb67bf6fc5e66fe0c1157624620\\classes.dex
+base.1=C\:\\Users\\Thoma\\AndroidStudioProjects\\android-kiosk-example\\KioskExample\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_41c3fd0820d25bb67bf6fc5e66fe0c1157624620
+file.0=C\:\\Users\\Thoma\\AndroidStudioProjects\\android-kiosk-example\\KioskExample\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_ad6d03908212e8706b82d255c14c729c120cb7e1\\classes.dex
