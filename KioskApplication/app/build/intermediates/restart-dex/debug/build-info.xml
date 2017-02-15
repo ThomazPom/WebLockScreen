@@ -4,32 +4,32 @@
     api-level="22"
     format="8"
     plugin-version="2.2.1"
-    timestamp="185562690610803"
-    token="-2611585383617813071"
+    timestamp="187685709927075"
+    token="2501036899269940389"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="603" />
+        duration="1410" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="41" />
+        duration="586" />
     <task
         name="verifier"
-        duration="5" />
+        duration="145" />
 
     <artifact
-        location="C:\Users\Thoma\AndroidStudioProjects\android-kiosk-example\KioskExample\app\build\outputs\apk\app-debug.apk"
+        location="C:\Users\Thoma\AndroidStudioProjects\WebLockScreen\WebLockScreen\KioskApplication\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="185562690610803"
+        timestamp="187685709927075"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\Thoma\AndroidStudioProjects\android-kiosk-example\KioskExample\app\build\outputs\apk\app-debug.apk"
+            location="C:\Users\Thoma\AndroidStudioProjects\WebLockScreen\WebLockScreen\KioskApplication\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
 

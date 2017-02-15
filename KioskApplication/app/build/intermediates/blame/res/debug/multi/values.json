@@ -1,17 +1,36 @@
 [
     {
-        "outputFile": "C:\\Users\\Thoma\\AndroidStudioProjects\\android-kiosk-example\\KioskExample\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "outputFile": "C:\\Users\\Thoma\\AndroidStudioProjects\\WebLockScreen\\WebLockScreen\\KioskApplication\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
         "map": [
             {
                 "to": {
                     "startLine": 2,
                     "startColumn": 4,
                     "startOffset": 55,
-                    "endColumn": 57,
-                    "endOffset": 108
+                    "endColumn": 49,
+                    "endOffset": 100
                 },
                 "from": {
-                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\android-kiosk-example\\KioskExample\\app\\src\\main\\res\\values\\dimens.xml",
+                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\WebLockScreen\\WebLockScreen\\KioskApplication\\app\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 19,
+                        "endColumn": 49,
+                        "endOffset": 64
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 290,
+                    "endColumn": 57,
+                    "endOffset": 343
+                },
+                "from": {
+                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\WebLockScreen\\WebLockScreen\\KioskApplication\\app\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -23,14 +42,14 @@
             },
             {
                 "to": {
-                    "startLine": 3,
+                    "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 113,
+                    "startOffset": 348,
                     "endColumn": 55,
-                    "endOffset": 164
+                    "endOffset": 399
                 },
                 "from": {
-                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\android-kiosk-example\\KioskExample\\app\\src\\main\\res\\values\\dimens.xml",
+                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\WebLockScreen\\WebLockScreen\\KioskApplication\\app\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -42,14 +61,14 @@
             },
             {
                 "to": {
-                    "startLine": 4,
+                    "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 169,
+                    "startOffset": 404,
                     "endColumn": 50,
-                    "endOffset": 215
+                    "endOffset": 450
                 },
                 "from": {
-                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\android-kiosk-example\\KioskExample\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\WebLockScreen\\WebLockScreen\\KioskApplication\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 4,
@@ -61,14 +80,14 @@
             },
             {
                 "to": {
-                    "startLine": 5,
+                    "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 220,
+                    "startOffset": 455,
                     "endColumn": 57,
-                    "endOffset": 273
+                    "endOffset": 508
                 },
                 "from": {
-                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\android-kiosk-example\\KioskExample\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\WebLockScreen\\WebLockScreen\\KioskApplication\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -80,14 +99,14 @@
             },
             {
                 "to": {
-                    "startLine": 6,
+                    "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 278,
+                    "startOffset": 513,
                     "endColumn": 71,
-                    "endOffset": 345
+                    "endOffset": 580
                 },
                 "from": {
-                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\android-kiosk-example\\KioskExample\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\WebLockScreen\\WebLockScreen\\KioskApplication\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -99,14 +118,14 @@
             },
             {
                 "to": {
-                    "startLine": 7,
+                    "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 350,
+                    "startOffset": 585,
                     "endColumn": 69,
-                    "endOffset": 415
+                    "endOffset": 650
                 },
                 "from": {
-                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\android-kiosk-example\\KioskExample\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\WebLockScreen\\WebLockScreen\\KioskApplication\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -118,14 +137,14 @@
             },
             {
                 "to": {
-                    "startLine": 8,
+                    "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 420,
+                    "startOffset": 655,
                     "endColumn": 95,
-                    "endOffset": 511
+                    "endOffset": 746
                 },
                 "from": {
-                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\android-kiosk-example\\KioskExample\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\WebLockScreen\\WebLockScreen\\KioskApplication\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -137,14 +156,14 @@
             },
             {
                 "to": {
-                    "startLine": 9,
+                    "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 516,
+                    "startOffset": 751,
                     "endColumn": 61,
-                    "endOffset": 573
+                    "endOffset": 808
                 },
                 "from": {
-                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\android-kiosk-example\\KioskExample\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\WebLockScreen\\WebLockScreen\\KioskApplication\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -156,14 +175,14 @@
             },
             {
                 "to": {
-                    "startLine": 10,
+                    "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 578,
+                    "startOffset": 813,
                     "endColumn": 59,
-                    "endOffset": 633
+                    "endOffset": 868
                 },
                 "from": {
-                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\android-kiosk-example\\KioskExample\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\WebLockScreen\\WebLockScreen\\KioskApplication\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -175,14 +194,14 @@
             },
             {
                 "to": {
-                    "startLine": 11,
+                    "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 638,
+                    "startOffset": 873,
                     "endColumn": 67,
-                    "endOffset": 701
+                    "endOffset": 936
                 },
                 "from": {
-                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\android-kiosk-example\\KioskExample\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\WebLockScreen\\WebLockScreen\\KioskApplication\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -194,14 +213,14 @@
             },
             {
                 "to": {
-                    "startLine": 12,
+                    "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 706,
+                    "startOffset": 941,
                     "endColumn": 65,
-                    "endOffset": 767
+                    "endOffset": 1002
                 },
                 "from": {
-                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\android-kiosk-example\\KioskExample\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\WebLockScreen\\WebLockScreen\\KioskApplication\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -213,14 +232,14 @@
             },
             {
                 "to": {
-                    "startLine": 13,
+                    "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 772,
+                    "startOffset": 1007,
                     "endColumn": 72,
-                    "endOffset": 840
+                    "endOffset": 1075
                 },
                 "from": {
-                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\android-kiosk-example\\KioskExample\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\WebLockScreen\\WebLockScreen\\KioskApplication\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -232,14 +251,14 @@
             },
             {
                 "to": {
-                    "startLine": 14,
+                    "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 845,
+                    "startOffset": 1080,
                     "endColumn": 76,
-                    "endOffset": 917
+                    "endOffset": 1152
                 },
                 "from": {
-                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\android-kiosk-example\\KioskExample\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\WebLockScreen\\WebLockScreen\\KioskApplication\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -251,14 +270,14 @@
             },
             {
                 "to": {
-                    "startLine": 15,
+                    "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 922,
+                    "startOffset": 1157,
                     "endColumn": 78,
-                    "endOffset": 996
+                    "endOffset": 1231
                 },
                 "from": {
-                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\android-kiosk-example\\KioskExample\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\WebLockScreen\\WebLockScreen\\KioskApplication\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -270,15 +289,15 @@
             },
             {
                 "to": {
-                    "startLine": 16,
+                    "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 1001,
-                    "endLine": 18,
+                    "startOffset": 1236,
+                    "endLine": 20,
                     "endColumn": 12,
-                    "endOffset": 1129
+                    "endOffset": 1364
                 },
                 "from": {
-                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\android-kiosk-example\\KioskExample\\app\\src\\main\\res\\values\\styles.xml",
+                    "file": "C:\\Users\\Thoma\\AndroidStudioProjects\\WebLockScreen\\WebLockScreen\\KioskApplication\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
