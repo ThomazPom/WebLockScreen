@@ -39,12 +39,16 @@
             android:enabled="true"
             android:exported="true" />
         />
-
-    <receiver
-        android:name=".IntentReceiver"
-        android:enabled="true"
-        android:exported="true" />
-    />
+        <receiver
+            android:name=".IntentReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        />
+        <activity
+            android:name=".PasswordActivity"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".SettingsActivity"
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>

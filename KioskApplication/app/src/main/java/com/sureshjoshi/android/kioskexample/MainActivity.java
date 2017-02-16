@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
@@ -19,27 +21,30 @@ public class MainActivity extends Activity {
 
 
 
+    public  static SharedPreferences sharedPreferences;
     @Bind(R.id.webview)
     public WebView mWebView;
 
     private View mDecorView;
-    private DevicePolicyManager mDpm;
-    private boolean mIsKioskEnabled = false;
+    public static DevicePolicyManager mDpm;
+    public static String packageName;
+    public static boolean mIsKioskEnabled = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
+        sharedPreferences = getPreferences(MODE_PRIVATE);
+        packageName=this.getPackageName();
         ComponentName deviceAdmin = new ComponentName(this, AdminReceiver.class);
         mDpm = (DevicePolicyManager) getSystemService(Context.DEVICE_POLICY_SERVICE);
         if (!mDpm.isAdminActive(deviceAdmin)) {
             Toast.makeText(this, getString(R.string.not_device_admin), Toast.LENGTH_SHORT).show();
         }
 
-        if (mDpm.isDeviceOwnerApp(getPackageName())) {
-            mDpm.setLockTaskPackages(deviceAdmin, new String[]{getPackageName()});
+        if (mDpm.isDeviceOwnerApp(packageName)) {
+            mDpm.setLockTaskPackages(deviceAdmin, new String[]{packageName});
         } else {
             Toast.makeText(this, getString(R.string.not_device_owner), Toast.LENGTH_SHORT).show();
         }
@@ -72,7 +77,7 @@ public class MainActivity extends Activity {
     private void enableKioskMode(boolean enabled) {
         try {
             if (enabled) {
-                if (mDpm.isLockTaskPermitted(this.getPackageName())) {
+                if (mDpm.isLockTaskPermitted(packageName)) {
                     startLockTask();
                     mIsKioskEnabled = true;
                 } else {
@@ -85,5 +90,13 @@ public class MainActivity extends Activity {
         } catch (Exception e) {
             // TODO: Log and handle appropriately
         }
+    }
+    @OnClick(R.id.btn_settings)
+    public void settingsOnclick()
+    {
+
+        Intent intent = new Intent(this, PasswordActivity.class);
+
+        startActivity(intent);
     }
 }

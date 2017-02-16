@@ -3,6 +3,7 @@ package com.sureshjoshi.android.kioskexample;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -20,7 +21,11 @@ public class IntentReceiver extends BroadcastReceiver {
                 String newPassword = intent.getStringExtra("newpassword");
                 if(newPassword!=null) {
                     Log.d("Change Password", newPassword);
+                    SharedPreferences.Editor edit = MainActivity.sharedPreferences.edit();
+                    edit.putString("password",newPassword);
+                    edit.commit();
                     // int age = intent.getIntExtra("age",0);
+
                 }
                 else
                 {
@@ -30,8 +35,10 @@ public class IntentReceiver extends BroadcastReceiver {
             if(intent.getAction().equals("com.pom.pm.removeadminrights"))
             {
 
-                //.mDpm.clearDeviceOwnerApp("com.sureshjoshi.android.kioskexample");
-
+                Log.d("Change rights","remove rights"+MainActivity.packageName);
+                if(MainActivity.mDpm.isDeviceOwnerApp(MainActivity.packageName)) {
+                    MainActivity.mDpm.clearDeviceOwnerApp(MainActivity.packageName);
+                }
             }
         }
     }
