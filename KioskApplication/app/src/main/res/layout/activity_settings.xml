@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
-        android:id="@+id/switch1"
+        android:id="@+id/kioskswitch"
         android:layout_below="@+id/textView3"
         android:layout_alignParentStart="true" />
 
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
         android:textSize="18sp"
-        android:layout_below="@+id/switch1"
+        android:layout_below="@+id/kioskswitch"
         android:layout_alignParentStart="true"
         android:layout_marginTop="13dp" />
 

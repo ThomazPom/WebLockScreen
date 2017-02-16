@@ -9,11 +9,12 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
-import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.Toast;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
 
 
@@ -24,17 +25,18 @@ public class MainActivity extends Activity {
     public  static SharedPreferences sharedPreferences;
     @Bind(R.id.webview)
     public WebView mWebView;
-
+    public static MainActivity singletonMainActivity;
     private View mDecorView;
     public static DevicePolicyManager mDpm;
     public static String packageName;
-    public static boolean mIsKioskEnabled = false;
+    public static boolean mIsKioskEnabled = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        singletonMainActivity = this;
         sharedPreferences = getPreferences(MODE_PRIVATE);
         packageName=this.getPackageName();
         ComponentName deviceAdmin = new ComponentName(this, AdminReceiver.class);
@@ -51,7 +53,9 @@ public class MainActivity extends Activity {
 
         mDecorView = getWindow().getDecorView();
 
-        mWebView.loadUrl("http://www.vicarasolutions.com/");
+        mWebView.loadUrl( sharedPreferences.getString("startURL","https://www.amazon.fr/"));
+
+        enableKioskMode( sharedPreferences.getBoolean("kioskmodenabled",mIsKioskEnabled));
     }
 
     @Override
@@ -74,7 +78,7 @@ public class MainActivity extends Activity {
                         | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
     }
 
-    private void enableKioskMode(boolean enabled) {
+    public void enableKioskMode(boolean enabled) {
         try {
             if (enabled) {
                 if (mDpm.isLockTaskPermitted(packageName)) {

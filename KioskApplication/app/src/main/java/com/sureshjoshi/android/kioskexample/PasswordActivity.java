@@ -7,6 +7,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.widget.EditText;
+import android.widget.Switch;
 
 import butterknife.ButterKnife;
 
@@ -25,7 +26,7 @@ public class PasswordActivity extends Activity {
         final String password = MainActivity.sharedPreferences.getString("password","secure");
 
         final PasswordActivity self = this;
-        if (MainActivity.mIsKioskEnabled && password.equals(tb_checkPassword.getText()))
+        if (MainActivity.mIsKioskEnabled && !password.equals(new String())|| password.equals(tb_checkPassword.getText()))
         {
             tb_checkPassword.addTextChangedListener(new TextWatcher() {
                 @Override
