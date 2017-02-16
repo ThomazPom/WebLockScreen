@@ -1,4 +1,4 @@
-#Thu Feb 16 00:31:46 CET 2017
+#Thu Feb 16 11:36:22 CET 2017
 base.0=C\:\\Users\\Thoma\\AndroidStudioProjects\\WebLockScreen\\WebLockScreen\\KioskApplication\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_e30aab9279d025159ec3b110438648c3c955aaa6
 renamed.1=classes.dex
 renamed.0=classes2.dex

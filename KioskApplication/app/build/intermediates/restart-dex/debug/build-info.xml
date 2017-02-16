@@ -4,29 +4,29 @@
     api-level="22"
     format="8"
     plugin-version="2.2.1"
-    timestamp="187685709927075"
+    timestamp="227565672396547"
     token="2501036899269940389"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="1410" />
+        duration="1292" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="586" />
+        duration="561" />
     <task
         name="verifier"
-        duration="145" />
+        duration="181" />
 
     <artifact
         location="C:\Users\Thoma\AndroidStudioProjects\WebLockScreen\WebLockScreen\KioskApplication\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="187685709927075"
+        timestamp="227565672396547"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\Thoma\AndroidStudioProjects\WebLockScreen\WebLockScreen\KioskApplication\app\build\outputs\apk\app-debug.apk"
