@@ -74,6 +74,31 @@ public class SettingsActivity extends Activity {
             }
         });
 
+        final String kioskname = MainActivity.sharedPreferences.getString("kioskname", getString(R.string.kioskname));
+        final EditText tb_kioskname = (EditText) findViewById(R.id.tb_kioskname);
+        tb_kioskname.setText(kioskname);
+        tb_kioskname.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                Log.d("Change kioskname", String.valueOf(tb_kioskname.getText()));
+                SharedPreferences.Editor edit = MainActivity.sharedPreferences.edit();
+                edit.putString("kioskname",String.valueOf(tb_kioskname.getText()));
+                edit.commit();
+
+            }
+        });
+
+
     }
 
     @OnCheckedChanged(R.id.kioskswitch)
@@ -90,6 +115,7 @@ public class SettingsActivity extends Activity {
         edit.remove("startURL");
         edit.remove("password");
         edit.remove("kioskmodenabled");
+        edit.remove("kioskname");
         edit.commit();
         Intent intent = getIntent();
         finish();

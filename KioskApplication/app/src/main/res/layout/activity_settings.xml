@@ -10,82 +10,115 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.sureshjoshi.android.kioskexample.SettingsActivity">
 
-    <TextView
-        android:text="Vous pouvez bloquer ou débloquer le mode Kiosque avec ce paramètre : "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:textSize="18sp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Switch
-        android:text="Kiosk "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:id="@+id/kioskswitch"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentStart="true" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <TextView
-        android:text="Vous pouvez définir le mot de passe de l'application ici :  "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        android:textSize="18sp"
-        android:layout_below="@+id/kioskswitch"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="13dp" />
+            <TextView
+                android:text="Vous pouvez bloquer ou débloquer le mode Kiosque avec ce paramètre : "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                android:textSize="18sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
 
-    <TextView
-        android:text="Mot de passe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="15dp" />
+            <Switch
+                android:text="Kiosk "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:id="@+id/kioskswitch"
+                android:layout_below="@+id/textView3"
+                android:layout_alignParentStart="true" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="text"
-        android:ems="10"
-        android:id="@+id/tb_setpassword"
-        android:background="@color/dim_foreground_material_dark"
-        android:textSize="18sp"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="12dp" />
+            <TextView
+                android:text="Vous pouvez définir le mot de passe de l'application ici :  "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:textSize="18sp"
+                android:layout_below="@+id/kioskswitch"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="13dp" />
 
-    <TextView
-        android:text="Url de base"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView4"
-        android:layout_below="@+id/tb_setpassword"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="11dp" />
+            <TextView
+                android:text="Mot de passe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:layout_below="@+id/textView2"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="15dp" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:id="@+id/tb_seturl"
-        android:background="@color/dim_foreground_material_dark"
-        android:textSize="18sp"
-        android:layout_marginTop="12dp"
-        android:layout_below="@+id/textView4"
-        android:layout_alignParentStart="true"
-        android:inputType="text" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:id="@+id/tb_setpassword"
+                android:background="@color/dim_foreground_material_dark"
+                android:textSize="18sp"
+                android:layout_below="@+id/textView"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="12dp" />
 
-    <Button
-        android:text="Parametres par défaut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/reset_default_btn" />
+            <TextView
+                android:text="Url de base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:layout_below="@+id/tb_setpassword"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="11dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/tb_seturl"
+                android:background="@color/dim_foreground_material_dark"
+                android:textSize="18sp"
+                android:layout_marginTop="12dp"
+                android:layout_below="@+id/textView4"
+                android:layout_alignParentStart="true"
+                android:inputType="text" />
+
+            <TextView
+                android:text="Nom d'application"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tf_kioskname"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/tb_seturl"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/tb_kioskname"
+                android:background="@color/dim_foreground_material_dark"
+                android:textSize="18sp"
+                android:layout_marginTop="12dp"
+                android:layout_below="@+id/textView4"
+                android:layout_alignParentStart="true"
+                android:inputType="text" />
+
+            <Button
+                android:text="Parametres par défaut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/reset_default_btn"
+                android:layout_marginTop="40dp" />
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

@@ -13,4 +13,5 @@
     <string name="check_update">Check for Update</string>
     <string name="startUrl">https://www.amazon.fr/</string>
     <string name="defaultpassword">secure</string>
+    <string name="kioskname">HelloKiosk</string>
 </resources>
