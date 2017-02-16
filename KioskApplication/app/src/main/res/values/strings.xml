@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Kiosk Example</string>
+    <string name="app_name">Web Locked Kiosk</string>
     <string name="device_admin_enabled">Device Admin enabled</string>
     <string name="device_admin_warning">Warning: Device Admin is going to be disabled.</string>
     <string name="device_admin_disabled">Device Admin disabled</string>

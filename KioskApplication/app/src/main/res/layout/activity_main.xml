@@ -4,7 +4,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.sureshjoshi.android.kioskexample.MainActivity">
+    tools:context="com.thomazpom.android.lockedwebkiosk.MainActivity">
 
     <WebView
         android:layout_width="match_parent"

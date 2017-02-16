@@ -1,11 +1,10 @@
-package com.sureshjoshi.android.kioskexample;
+package com.thomazpom.android.lockedwebkiosk;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.util.Log;
-import android.widget.Toast;
 
 /**
  * Created by Thoma on 14/02/2017.

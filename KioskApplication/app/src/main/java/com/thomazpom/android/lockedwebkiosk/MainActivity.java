@@ -1,4 +1,4 @@
-package com.sureshjoshi.android.kioskexample;
+package com.thomazpom.android.lockedwebkiosk;
 
 import android.app.Activity;
 import android.app.admin.DevicePolicyManager;
@@ -9,16 +9,13 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.CompoundButton;
 import android.widget.Toast;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
 
 
@@ -47,6 +44,7 @@ public class MainActivity extends Activity {
         mDpm = (DevicePolicyManager) getSystemService(Context.DEVICE_POLICY_SERVICE);
 
 
+        setTitle(MainActivity.sharedPreferences.getString("kioskname",getString(R.string.kioskname)));
         if (!mDpm.isAdminActive(deviceAdmin)) {
             Toast.makeText(this, getString(R.string.not_device_admin), Toast.LENGTH_SHORT).show();
         }

@@ -1,4 +1,4 @@
-package com.sureshjoshi.android.kioskexample;
+package com.thomazpom.android.lockedwebkiosk;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,7 +7,6 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.widget.EditText;
-import android.widget.Switch;
 
 import butterknife.ButterKnife;
 
@@ -20,6 +19,7 @@ public class PasswordActivity extends Activity {
         setContentView(R.layout.activity_password);
 
 
+        setTitle(MainActivity.sharedPreferences.getString("kioskname",getString(R.string.kioskname))+" - Mot de passe");
         final EditText tb_checkPassword = (EditText) findViewById( R.id.tb_checkPassword);
         ButterKnife.bind(this);
 

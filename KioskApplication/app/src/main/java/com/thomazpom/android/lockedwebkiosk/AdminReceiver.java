@@ -1,4 +1,4 @@
-package com.sureshjoshi.android.kioskexample;
+package com.thomazpom.android.lockedwebkiosk;
 
 import android.app.admin.DeviceAdminReceiver;
 import android.content.Context;

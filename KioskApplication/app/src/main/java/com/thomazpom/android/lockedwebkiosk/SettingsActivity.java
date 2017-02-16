@@ -1,6 +1,8 @@
-package com.sureshjoshi.android.kioskexample;
+package com.thomazpom.android.lockedwebkiosk;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -24,8 +26,8 @@ public class SettingsActivity extends Activity {
         ButterKnife.bind(this);
         Switch switchKisosk = (Switch) findViewById(R.id.kioskswitch);
         switchKisosk.setChecked(MainActivity.mIsKioskEnabled);
-
-        final String password = MainActivity.sharedPreferences.getString("password",getString(R.string.defaultpassword));
+        setTitle(MainActivity.sharedPreferences.getString("kioskname", getString(R.string.kioskname)) + " - Réglages");
+        final String password = MainActivity.sharedPreferences.getString("password", getString(R.string.defaultpassword));
         final EditText tb_setpassword = (EditText) findViewById(R.id.tb_setpassword);
         tb_setpassword.setText(password);
         tb_setpassword.addTextChangedListener(new TextWatcher() {
@@ -43,7 +45,7 @@ public class SettingsActivity extends Activity {
             public void afterTextChanged(Editable editable) {
                 Log.d("Change Password", String.valueOf(tb_setpassword.getText()));
                 SharedPreferences.Editor edit = MainActivity.sharedPreferences.edit();
-                edit.putString("password",String.valueOf(tb_setpassword.getText()));
+                edit.putString("password", String.valueOf(tb_setpassword.getText()));
                 edit.commit();
 
             }
@@ -68,7 +70,7 @@ public class SettingsActivity extends Activity {
             public void afterTextChanged(Editable editable) {
                 Log.d("Change url", String.valueOf(tb_seturl.getText()));
                 SharedPreferences.Editor edit = MainActivity.sharedPreferences.edit();
-                edit.putString("startURL",String.valueOf(tb_seturl.getText()));
+                edit.putString("startURL", String.valueOf(tb_seturl.getText()));
                 edit.commit();
 
             }
@@ -92,7 +94,7 @@ public class SettingsActivity extends Activity {
             public void afterTextChanged(Editable editable) {
                 Log.d("Change kioskname", String.valueOf(tb_kioskname.getText()));
                 SharedPreferences.Editor edit = MainActivity.sharedPreferences.edit();
-                edit.putString("kioskname",String.valueOf(tb_kioskname.getText()));
+                edit.putString("kioskname", String.valueOf(tb_kioskname.getText()));
                 edit.commit();
 
             }
@@ -103,22 +105,31 @@ public class SettingsActivity extends Activity {
 
     @OnCheckedChanged(R.id.kioskswitch)
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-       MainActivity.singletonMainActivity.enableKioskMode(isChecked);
+        MainActivity.singletonMainActivity.enableKioskMode(isChecked);
         SharedPreferences.Editor edit = MainActivity.sharedPreferences.edit();
-        edit.putBoolean("kioskmodenabled",isChecked);
+        edit.putBoolean("kioskmodenabled", isChecked);
         edit.commit();
     }
+
     @OnClick(R.id.reset_default_btn)
-    public void resetdefaults()
-    {
-        SharedPreferences.Editor edit = MainActivity.sharedPreferences.edit();
-        edit.remove("startURL");
-        edit.remove("password");
-        edit.remove("kioskmodenabled");
-        edit.remove("kioskname");
-        edit.commit();
-        Intent intent = getIntent();
-        finish();
-        startActivity(intent);
+    public void resetdefaults() {
+        new AlertDialog.Builder(SettingsActivity.this)
+                .setMessage("Réinitialiser les valeurs par défault?")
+                .setCancelable(false)
+                .setPositiveButton("Oui", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        SharedPreferences.Editor edit = MainActivity.sharedPreferences.edit();
+                        edit.remove("startURL");
+                        edit.remove("password");
+                        edit.remove("kioskmodenabled");
+                        edit.remove("kioskname");
+                        edit.commit();
+                        Intent intent = getIntent();
+                        finish();
+                        startActivity(intent);
+                    }
+                })
+                .setNegativeButton("Non, annuler", null)
+                .show();
     }
 }
