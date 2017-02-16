@@ -9,7 +9,10 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 
@@ -42,6 +45,8 @@ public class MainActivity extends Activity {
         packageName=this.getPackageName();
         ComponentName deviceAdmin = new ComponentName(this, AdminReceiver.class);
         mDpm = (DevicePolicyManager) getSystemService(Context.DEVICE_POLICY_SERVICE);
+
+
         if (!mDpm.isAdminActive(deviceAdmin)) {
             Toast.makeText(this, getString(R.string.not_device_admin), Toast.LENGTH_SHORT).show();
         }
@@ -53,10 +58,14 @@ public class MainActivity extends Activity {
         }
 
         mDecorView = getWindow().getDecorView();
-
+        mWebView.setWebViewClient(new WebViewClient());
+        WebSettings webSettings = mWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
         mWebView.loadUrl( sharedPreferences.getString("startURL",getString(R.string.startUrl)));
 
         enableKioskMode( sharedPreferences.getBoolean("kioskmodenabled",mIsKioskEnabled));
+
+
     }
 
     @Override
