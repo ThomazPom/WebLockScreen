@@ -1,6 +1,7 @@
 package com.sureshjoshi.android.kioskexample;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
@@ -12,6 +13,7 @@ import android.widget.Switch;
 
 import butterknife.ButterKnife;
 import butterknife.OnCheckedChanged;
+import butterknife.OnClick;
 
 public class SettingsActivity extends Activity {
 
@@ -20,11 +22,11 @@ public class SettingsActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         ButterKnife.bind(this);
-
-        final String password = MainActivity.sharedPreferences.getString("password","secure");
-        final EditText tb_setpassword = (EditText) findViewById(R.id.tb_setpassword);
         Switch switchKisosk = (Switch) findViewById(R.id.kioskswitch);
         switchKisosk.setChecked(MainActivity.mIsKioskEnabled);
+
+        final String password = MainActivity.sharedPreferences.getString("password",getString(R.string.defaultpassword));
+        final EditText tb_setpassword = (EditText) findViewById(R.id.tb_setpassword);
         tb_setpassword.setText(password);
         tb_setpassword.addTextChangedListener(new TextWatcher() {
             @Override
@@ -47,6 +49,31 @@ public class SettingsActivity extends Activity {
             }
         });
 
+
+        final String startURL = MainActivity.sharedPreferences.getString("startURL", getString(R.string.startUrl));
+        final EditText tb_seturl = (EditText) findViewById(R.id.tb_seturl);
+        tb_seturl.setText(startURL);
+        tb_seturl.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                Log.d("Change url", String.valueOf(tb_seturl.getText()));
+                SharedPreferences.Editor edit = MainActivity.sharedPreferences.edit();
+                edit.putString("startURL",String.valueOf(tb_seturl.getText()));
+                edit.commit();
+
+            }
+        });
+
     }
 
     @OnCheckedChanged(R.id.kioskswitch)
@@ -55,5 +82,17 @@ public class SettingsActivity extends Activity {
         SharedPreferences.Editor edit = MainActivity.sharedPreferences.edit();
         edit.putBoolean("kioskmodenabled",isChecked);
         edit.commit();
+    }
+    @OnClick(R.id.reset_default_btn)
+    public void resetdefaults()
+    {
+        SharedPreferences.Editor edit = MainActivity.sharedPreferences.edit();
+        edit.remove("startURL");
+        edit.remove("password");
+        edit.remove("kioskmodenabled");
+        edit.commit();
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
     }
 }

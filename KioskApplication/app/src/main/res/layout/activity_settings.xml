@@ -58,4 +58,34 @@
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
         android:layout_marginTop="12dp" />
+
+    <TextView
+        android:text="Url de base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/tb_setpassword"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="11dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/tb_seturl"
+        android:background="@color/dim_foreground_material_dark"
+        android:textSize="18sp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentStart="true"
+        android:inputType="text" />
+
+    <Button
+        android:text="Parametres par défaut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/reset_default_btn" />
+
 </RelativeLayout>

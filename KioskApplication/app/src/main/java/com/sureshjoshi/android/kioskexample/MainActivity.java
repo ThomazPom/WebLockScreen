@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.CompoundButton;
@@ -53,7 +54,7 @@ public class MainActivity extends Activity {
 
         mDecorView = getWindow().getDecorView();
 
-        mWebView.loadUrl( sharedPreferences.getString("startURL","https://www.amazon.fr/"));
+        mWebView.loadUrl( sharedPreferences.getString("startURL",getString(R.string.startUrl)));
 
         enableKioskMode( sharedPreferences.getBoolean("kioskmodenabled",mIsKioskEnabled));
     }
@@ -99,8 +100,26 @@ public class MainActivity extends Activity {
     public void settingsOnclick()
     {
 
+        Log.d("settings btn","Pressed");
         Intent intent = new Intent(this, PasswordActivity.class);
 
         startActivity(intent);
+    }
+    @OnClick (R.id.btn_home)
+    public void homeOnClick()
+    {
+        Log.d("Home btn","Pressed");
+        mWebView.loadUrl( sharedPreferences.getString("startURL",getString(R.string.startUrl)));
+
+    }
+    @OnClick(R.id.btn_left_arrow)
+    public void backOnClick()
+    {
+
+        Log.d("Back btn","Pressed");
+        if (mWebView.canGoBack())
+        {
+            mWebView.goBack();
+        }
     }
 }
